@@ -19,6 +19,7 @@ jobs:
       run: >-
           sudo apt update && sudo apt install
           libudev-dev
+          alsa-base
           ${{ matrix.ui.packages }}
     - uses: actions/checkout@v3
     - name: Build
