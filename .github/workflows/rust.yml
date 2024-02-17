@@ -28,5 +28,9 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
     
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.1
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+          name: 'martypc-UbuntuJammy-x86_64-gha${{ github.run_number }}'
+          path: build/artifacts/**
